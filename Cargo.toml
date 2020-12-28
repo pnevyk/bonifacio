@@ -1,0 +1,22 @@
+[package]
+name = "bonifacio"
+version = "0.1.0" # remember to update html_root_url
+authors = ["Petr Nevyhoštěný <petr.nevyhosteny@gmail.com>"]
+edition = "2018"
+description = "A set of standard collections, backed by a file instead of memory. Intended for use when facing huge amount of data."
+license = "MIT or UNLICENSE"
+repository = "https://github.com/pnevyk/bonifacio"
+keywords = ["vec", "string", "hash map", "hash set", "file", "mmap"]
+categories = ["data-structures", "filesystem"]
+
+[dependencies]
+harrow = { path = "../harrow" }
+uuid = { version = "0.8", features = ["v4"] }
+
+[dev-dependencies]
+proptest = "0.10"
+criterion = "0.3"
+
+[[bench]]
+name = "vec"
+harness = false
